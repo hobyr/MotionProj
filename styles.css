@@ -29,7 +29,29 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -2;
+}
+
+section {
+  padding-block: 5rem;
+}
+
+.section-text > * {
+  margin-top: 0;
+}
+
+.section-text > h3 {
+  font-size: 3em;
+  border-top: 2px solid black;
+  padding-top: 1.5rem;
+}
+
+.section-title {
+  position: relative;
+  left: 4em;
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.4em;
 }
 
 .hero-img {
@@ -42,13 +64,16 @@ header {
   filter: brightness(0.70);
 }
 
+.hero-content {
+  z-index: 2;
+}
+
 .hero-text {
   position: relative;
-  top: 7em;
+  top: 2em;
   left: 3em;
   color: rgba(255, 255, 255, 0.92);
 }
-
 
 .hero-text h1 {
   font-size: 6.4rem;
@@ -71,17 +96,23 @@ header {
 
 #hero nav {
   font-family: "Funnel Display";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: white;
   text-transform: uppercase;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 3rem;
+}
+
+.nav-cta {
+  background-color: orange;
+  border-width: 2px;
+  border-color: orange;
+  border-style: solid;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 9999px;
 }
 
 .header-cta {
@@ -97,6 +128,13 @@ header {
   padding-inline: 2rem;
   padding-block: 1rem;
   border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-cta:hover {
+  background-color: rgb(60, 60, 60, 0.5);
 }
 
 .top-navbar {
@@ -116,10 +154,17 @@ main {
   position: relative;
   top: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
 }
 
 .container {
   width: min(70%, 1400px);
   padding: 3rem;
   margin-inline: auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
