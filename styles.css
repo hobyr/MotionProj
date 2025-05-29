@@ -158,6 +158,7 @@ section {
   height: 3px;
   width: 0%;
   background-color: white;
+  opacity: 0.5;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -167,6 +168,7 @@ section {
 
 .nav-link:hover::after {
   width: 100%;
+  opacity: 1;
 }
 
 main {
@@ -184,46 +186,38 @@ main {
   margin-inline: auto;
 }
 
-.grid-2:nth-of-type(2n) {
+.grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
 }
 
-.grid-2:nth-of-type(2n+1) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-}
-
-.section-title,
-.bg-section-title {
-  width: fit-content;
+section header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 25rem;
 }
 
 .section-title {
   font-size: 6em;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 1.4em;
   position: relative;
-  top: 0;
-  left: 7em;
+  left: 6rem;
 }
 
 .bg-section-title {
   z-index: -1;
   opacity: 0.07;
-  font-size: 10em;
-  position: absolute;
-  top: 5.5rem;
-  right: 3.4em;
+  font-size: 13em;
   width: fit-content;
+  position: relative;
+  top: -3rem;
 }
 
 .section-cover,
 .section-text {
-  margin-top: 4rem;
 }
 
 .section-text > * {
@@ -250,7 +244,6 @@ main {
 .section-cover {
   object-fit: cover;
   height: 100%;
-  max-height: 600px;
 }
 
 .section-link {
@@ -264,7 +257,7 @@ main {
 }
 
 .section-link:hover {
-  color: rgb(100, 100, 100);
+  color: rgb(50, 50, 150);
 }
 
 .section-link .fa-solid {
@@ -273,13 +266,13 @@ main {
 
 .section-link::before {
   content: "";
-  height: 3px;
+  height: 1px;
   width: 100%;
   opacity: 0;
   position: absolute;
   bottom: 0px;
   left: 0;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(50, 50, 150);
   transition-duration: 300ms;
 }
 
